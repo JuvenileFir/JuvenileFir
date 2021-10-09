@@ -1,0 +1,8 @@
+*.log
+f*_data.txt
+*.out
+
+logs/
+report/
+
+run_tpch.sh
