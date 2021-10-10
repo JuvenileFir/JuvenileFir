@@ -125,7 +125,7 @@ typedef struct {
   int jobs;
   bool is_unique;
   int next_task;
-} simd_scan_args_t;
+} simd_scan_args_t;//用于simd_scan（）函数
 typedef struct {
   int start;
   int jobs;
@@ -218,16 +218,16 @@ void le_scan_work(int t_id, int bitmap_res_tmp[][2]) {
       //将32个字节的最高有效位（1/0）提取出来组合为一个32位int数，即变成位向量
       bitmap_res[i / 32] = bitvector_def;//前面数组中的下标实际为1、2、3……
       //bitmap_res即位向量
-      if (!is_unique_1) {//若是非唯一码，还要考虑相等的情况
+      if (!is_unique_1) {//若是非唯一码，还要判断是否相等。因为唯一码就一对一代表了target
         __m256i possible = _mm256_cmpeq_epi8(code, repeat_sx_256_1);
 
         int bitvector_possible = _mm256_movemask_epi8(possible);
 
 //检查边界值是否有任何匹配的元组并存储符合条件的位置
         if (bitvector_possible) {//如果有相等的位置，就存入bitmap_res_tmp
-          bitmap_res_tmp[bitmap_res_tmp_idx][0] = i >> 5;//i除以32
+          bitmap_res_tmp[bitmap_res_tmp_idx][0] = i >> 5;//i除以32，记录是第几次计算的
           bitmap_res_tmp[bitmap_res_tmp_idx][1] = bitvector_possible;
-          bitmap_res_tmp_idx++;
+          bitmap_res_tmp_idx++;//代表待进一步判断的非唯一编码个数
         }
       }
     }
@@ -236,18 +236,18 @@ void le_scan_work(int t_id, int bitmap_res_tmp[][2]) {
 //检查所有不确定的元组（tuples）
     if (!is_unique_1) {
       for (int i = 0; i < bitmap_res_tmp_idx; i++) {
-        int bitmap_pos = bitmap_res_tmp[i][0];
-        int bitmap = bitmap_res_tmp[i][1];
+        int bitmap_pos = bitmap_res_tmp[i][0];//非唯一编码位置
+        int bitmap = bitmap_res_tmp[i][1];//判断相等的位向量
         while (bitmap) {
-          int mask = bitmap & (~bitmap + 1);
+          int mask = bitmap & (~bitmap + 1);//~即按位取反，再+1即补码。效果为只保留到最低位1
           int j = __builtin_ctz(bitmap);
-          //__builtin_ctz（）函数用于计算输入数二进制形态下从最低位（右）起连续的0个数。此函数版本针对uint
-          int data_pos = (bitmap_pos << 5) + j;
+          //↑__builtin_ctz（）函数用于计算输入数二进制形态下从最低位（右）起连续的0个数。此函数版本针对uint
+          int data_pos = (bitmap_pos << 5) + j;//换算出第一个相等的位向量编码位置
           if (data_pos < DATA_N && (mask & bitmap_res_tmp[i][1]) &&
               data[data_pos] < TARGET_NUMBER)
             bitmap_res[bitmap_pos] |= mask;
-
-          bitmap = bitmap & (bitmap - 1);
+            //↑注意此处相|的对象是bitmap_res数组，正常情况下其相等位置应全为0。故此操作为逐一单点置位
+          bitmap = bitmap & (bitmap - 1);//与减了1的自己相与，效果为去掉一个最低位1
         }
       }
     }
@@ -400,7 +400,8 @@ void bet_scan_work(int t_id, int bitmap_res_tmp[][2]) {
 
           int data_pos = (bitmap_pos << 5) + j;
           if (data_pos < DATA_N && (mask & bitmap_res_tmp[i][1]) &&
-              data[data_pos] > TARGET_NUMBER)
+              data[data_pos] > TARGET_NUMBER && 
+              data[data_pos] < TARGET_NUMBER_2)//后续添加，源程序似乎遗漏此条件
             bitmap_res[bitmap_pos] |= mask;
 
           bitmap = bitmap & (bitmap - 1);
@@ -705,7 +706,7 @@ int binary_search(base_t num, base_t arr[], int n) {
   return -1;
 }
 
-void create_map() {
+void create_map() {//map_array即函数S（）的线性排列
   std::sort(samples, samples + SAMPLES_N);//样本排序
 
   base_t freqs_samples[FREQ_Z - 1];//二次取样样本值数组
@@ -1238,7 +1239,7 @@ int main(int argc, char* argv[]) {
     init_data_from_file();
   else
     init_data_by_random();
-//创建映射
+//创建映射S
   if (CODE_WIDTH == 8)
     create_map_8bit();
   else
