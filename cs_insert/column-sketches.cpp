@@ -2,7 +2,7 @@
 #include <inttypes.h>
 
 #include <algorithm>
-#include <emmintrin.h>
+//#include <emmintrin.h>
 #include <asm/unistd.h>
 #include <getopt.h>
 #include <immintrin.h>
@@ -18,8 +18,9 @@
 #include <sys/time.h>
 #include <time.h>
 #include <unistd.h>
-
+#include <bitset>
 #include <iostream>
+#include <iomanip>
 #include <random>
 #include <sstream>
 #include <string>
@@ -73,8 +74,10 @@ int STRIDE = 4096;
 int DEBUG = 0;
 int OPERATOR_TYPE;
 base_t TARGET_NUMBER_2;
+
 std::vector<base_t> target_numbers_l;  // 左端点
 std::vector<base_t> target_numbers_r;  // 右端点
+std::vector<base_t> insert_numbers;
 char OP[5];
 const int BITSWIDTH = sizeof(base_t) * 8;//即32
 const int BITSSHIFT = 5;  // x / BITSWIDTH == x >> BITSSHIFT
@@ -84,6 +87,7 @@ int JOBS_PER_THREAD;
 base_t MAX_CODE_VAL;
 int MALLOC_DATA_N;
 int BITMAP_N;
+int size;
 
 
 base_t* data;
@@ -168,7 +172,7 @@ void usage() {
   printf("usage: \n");
   printf("-n: DATA_N \tDefault: %d\n", DATA_N);
   printf("[ -f: DATA_PATH ]\n");
-  printf("-t: TARGET_NUMBER \tDefault: %d\n", TARGET_NUMBER);
+  printf("-l: TARGET_NUMBER \tDefault: %d\n", TARGET_NUMBER);
   printf("-r: TARGET_NUMBER_2 \tDefault: %d\n", TARGET_NUMBER_2);
   printf("-T: THREAD_N \tDefault: %d\n", THREAD_N);
   printf("-w: CODE_WIDTH \tDefault: %d\n", CODE_WIDTH);
@@ -412,7 +416,7 @@ std::vector<base_t> get_target_numbers(const char* s) {
 }
 
 void init(int argc, char* argv[]) {
-  char optstr[] = "n:f:l:r:T:w:s:o:d";
+  char optstr[] = "n:f:l:r:i:T:w:s:o:d";
   extern char* optarg;
   char opt;
 
@@ -430,6 +434,9 @@ void init(int argc, char* argv[]) {
         break;
       case 'r':
         target_numbers_r = get_target_numbers(optarg);
+        break;
+      case 'i':
+        insert_numbers = get_target_numbers(optarg);
         break;
       case 'T':
         THREAD_N = atoi(optarg);
@@ -530,6 +537,9 @@ void init(int argc, char* argv[]) {
   std::cout << "TARGET_R: " << std::endl;
   for (auto& n : target_numbers_r) std::cout << n << " ";
   std::cout << std::endl;
+  std::cout << "INSERT: " << std::endl;
+  for (auto& n : insert_numbers) std::cout << n << " ";
+  std::cout << std::endl;
   printf("THREAD_N: %d\n", THREAD_N);
   printf("CODE_WIDTH: %d\n", CODE_WIDTH);
   printf("STRIDE: %d\n", STRIDE);
@@ -561,6 +571,9 @@ void ReservoirSample(T data[], int n, T samples[], int k) {
 void* MakeSamplesWork(void* argument) {
   int t_id = *(int*)argument;
   double ratio = (double)SAMPLES_N / DATA_N;
+ 
+  int Samples_n = (int)(size * ratio);
+  
   std::random_device rd;
   std::mt19937 mt(rd());
   std::uniform_real_distribution<double> dist(0, 1);
@@ -571,7 +584,7 @@ void* MakeSamplesWork(void* argument) {
     double tmp = dist(mt);//用以随机取样
     if (tmp < ratio) {
       pthread_mutex_lock(&lock);
-      if (gened_samples_n < SAMPLES_N)
+      if (gened_samples_n < Samples_n)
         samples[gened_samples_n++] = data[cur];
       else
         break_loop = true;
@@ -620,7 +633,7 @@ void init_data_by_random() {
   std::uniform_int_distribution<base_t> dist(0, MAX_CODE_VAL);//指定随机数生成范围
 
   printf("initing data by random\n");
-
+  size = DATA_N;
   // data and samples
   for (int i = 0; i < DATA_N; i++) data[i] = dist(mt);
 
@@ -643,34 +656,39 @@ void init_data_from_file() {
   // 8/16/32 only
   if (CODE_WIDTH == 8) {
     uint8_t* file_data = (uint8_t*)malloc(DATA_N * sizeof(uint8_t));
-    if (fread(file_data, sizeof(uint8_t), DATA_N, fp) == 0) {
+    size = fread(file_data, sizeof(uint8_t), DATA_N, fp);
+    if ( size == 0) {
       printf("init_data_from_file: fread faild.\n");
       exit(-1);
     }
-    for (int i = 0; i < DATA_N; i++) data[i] = file_data[i];
+    for (int i = 0; i < size; i++) data[i] = file_data[i];
     free(file_data);
   } else if (CODE_WIDTH == 16) {
     uint16_t* file_data = (uint16_t*)malloc(DATA_N * sizeof(uint16_t));
-    if (fread(file_data, sizeof(uint16_t), DATA_N, fp) == 0) {
+    size = fread(file_data, sizeof(uint16_t), DATA_N, fp); 
+    if (size == 0) {
       printf("init_data_from_file: fread faild.\n");
       exit(-1);
     }
-    for (int i = 0; i < DATA_N; i++) data[i] = file_data[i];
+    for (int i = 0; i < size; i++) data[i] = file_data[i];
     free(file_data);
   } else if (CODE_WIDTH == 32) {
     uint32_t* file_data = (uint32_t*)malloc(DATA_N * sizeof(uint32_t));
-    if (fread(file_data, sizeof(uint32_t), DATA_N, fp) == 0) {
+    size = fread(file_data, sizeof(uint32_t), DATA_N, fp);
+    if (size == 0) {
       printf("init_data_from_file: fread faild.\n");
       exit(-1);
     }
-    for (int i = 0; i < DATA_N; i++) data[i] = file_data[i];
+    for (int i = 0; i < size; i++) data[i] = file_data[i];
     free(file_data);
   } else {
     printf("init_data_from_file: CODE_WIDTH != 8/16/32.\n");
     exit(-1);
   }
 
+  JOBS_PER_THREAD = ROUNDUP(ROUNDUP_DIVIDE(size, THREAD_N), 32);
   // ReservoirSample(data, DATA_N, samples, SAMPLES_N);
+  printf("数据装载完成，开始采样\ndata数据量%d\n每线程任务数%d\n",size,JOBS_PER_THREAD);
   MakeSamples();
 
   printf("init_data_from_file: done\n");
@@ -1239,6 +1257,48 @@ void test_scan(base_t target) {
   }
 }
 
+void insert(){
+  int cur = -1;
+  size = DATA_N;
+  if (strlen(DATA_PATH)){
+    FILE*fp = fopen(DATA_PATH, "rb");
+
+      uint32_t* file_data = (uint32_t*)malloc(DATA_N * sizeof(uint32_t));
+      size=fread(file_data, sizeof(uint32_t), DATA_N, fp);
+      free(file_data);
+
+
+    if(size == DATA_N){
+    printf("Overflow: failed to insert.\n");
+    exit(-1);
+  }
+    for (size_t pi = 0; pi < insert_numbers.size(); pi++){
+      data[size++] = insert_numbers[pi];
+      if(map_array[SKE_CODE_2_POS(map_it(data[size+pi]))][1] == NON_UNIQUE_CODE)  cur++;
+    }
+
+    if (cur > 255){
+          MakeSamples();//此处Makesamples()可重写
+          create_map();
+        }
+    
+    for (size_t pi = 0; pi < insert_numbers.size(); pi++) {
+    int temp_size = size-insert_numbers.size();
+    base_t INSERT_NUMBER = insert_numbers[pi];
+    ske_t ske_code = map_it(INSERT_NUMBER);
+    printf("插入第%lu次\t%u\n----------------------------\n", pi+1, INSERT_NUMBER);
+    ske_col[temp_size++]=ske_code;
+    
+      
+    }
+  }
+
+  else{
+      printf("Overflow: failed to insert.\n");
+      exit(-1);
+    }
+}
+
 void clean() {
   // free mallocs
   free(data);
@@ -1249,6 +1309,7 @@ void clean() {
 }
 
 int main(int argc, char* argv[]) {
+  
   init(argc, argv);//先初始化
 //根据情况生成数据
   if (strlen(DATA_PATH))
@@ -1262,9 +1323,15 @@ int main(int argc, char* argv[]) {
     create_map();
 //创建Sketched Column
   create_ske_col();
-
+  if(insert_numbers.size()) insert();
+  for(int i=0;i<10;i++){
+    std::bitset<8> s(ske_col[size-1-i]);
+    std::cout<<"倒数第"<<std::setw(2)<<std::left<<i+1<<"个数："
+             <<std::setw(10)<<std::left<<data[size-1-i]<<" "<<"编码："<<s<<std::endl
+             <<"-----------------------------------------"<<std::endl;
+  }
   for (size_t pi = 0; pi < target_numbers_l.size(); pi++) {
-    printf("RUNNING %lu\n", pi);//%lu即无符号长整型long unsigned
+    printf("第%lu组比较\n", pi+1);//%lu即无符号长整型long unsigned
     TARGET_NUMBER = target_numbers_l[pi];
     if (target_numbers_r.size() != 0) {
       assert(strcmp("bt", OP) == 0);
