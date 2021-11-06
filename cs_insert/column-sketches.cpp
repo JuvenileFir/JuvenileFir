@@ -1273,24 +1273,29 @@ void insert(){
     exit(-1);
   }
     for (size_t pi = 0; pi < insert_numbers.size(); pi++){
-      data[size++] = insert_numbers[pi];
+      data[size+pi] = insert_numbers[pi];
       if(map_array[SKE_CODE_2_POS(map_it(data[size+pi]))][1] == NON_UNIQUE_CODE)  cur++;
     }
 
-    if (cur > 255){
+   /* if (cur > 255){
           MakeSamples();//此处Makesamples()可重写
           create_map();
-        }
+        }*/
     
     for (size_t pi = 0; pi < insert_numbers.size(); pi++) {
-    int temp_size = size-insert_numbers.size();
+    //int temp_size = size-insert_numbers.size();
     base_t INSERT_NUMBER = insert_numbers[pi];
     ske_t ske_code = map_it(INSERT_NUMBER);
-    printf("插入第%lu次\t%u\n----------------------------\n", pi+1, INSERT_NUMBER);
-    ske_col[temp_size++]=ske_code;
-    
-      
+    std::bitset<8> d(ske_code);
+    //printf(%lu%u\n\n", , );
+    std::cout<<"插入第 "<<pi+1<<" 个数："
+             <<std::setw(12)<<std::left<<INSERT_NUMBER<<"编码："<<d;
+    printf("  十进制形式：%d\n-----------------------------------------------------------\n",
+           ske_code);
+    ske_col[size+pi]=ske_code;
+          
     }
+    size+=insert_numbers.size();
   }
 
   else{
@@ -1326,9 +1331,10 @@ int main(int argc, char* argv[]) {
   if(insert_numbers.size()) insert();
   for(int i=0;i<10;i++){
     std::bitset<8> s(ske_col[size-1-i]);
-    std::cout<<"倒数第"<<std::setw(2)<<std::left<<i+1<<"个数："
-             <<std::setw(10)<<std::left<<data[size-1-i]<<" "<<"编码："<<s<<std::endl
-             <<"-----------------------------------------"<<std::endl;
+    std::cout<<"倒数第 "<<std::setw(2)<<std::left<<i+1<<"个数："
+             <<std::setw(12)<<std::left<<data[size-1-i]<<"编码："<<s;
+    printf("  十进制形式：%d\n-----------------------------------------------------------\n",
+           ske_col[size-1-i]);
   }
   for (size_t pi = 0; pi < target_numbers_l.size(); pi++) {
     printf("第%lu组比较\n", pi+1);//%lu即无符号长整型long unsigned
