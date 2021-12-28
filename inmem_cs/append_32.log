@@ -1,0 +1,43 @@
+DATA_N: 2000000
+DATA_PATH: data_1e6
+TARGET_NUMBER: 0
+TARGET_NUMBER_2: 0
+TARGET_L: 
+
+TARGET_R: 
+
+INSERT: 
+
+THREAD_N: 16
+CODE_WIDTH: 32
+STRIDE: 4096
+OPERATOR_TYPE: 0
+DEBUG: 0
+
+SAMPLES_N: 1000
+JOBS_PER_THREAD: 125024
+MAX_CODE_VAL: 4294967295
+MALLOC_DATA_N: 2097152
+BITMAP_N: 65536
+----------
+开始从文件：data_1e6 装载数据 
+装载数据完成，用时： 7.058000 ms
+data数据量：1000000   每线程任务数：62528
+
+开始采样
+采样完成，用时： 2.022000 ms
+
+开始创建映射函数S
+创建映射函数S 完成  用时： 0.003000 ms
+
+开始创建ske_col
+创建ske_col完成，用时： 23.361000 ms
+
+开始append：data_1e6_2
+新data数据量:2000000	每线程任务数:125024
+开始创建映射函数S
+创建映射函数S 完成  用时： 0.004000 ms
+
+append完成，用时： 361.069000 ms
+
+插入数据量：1000000  插入后总数据量：2000000

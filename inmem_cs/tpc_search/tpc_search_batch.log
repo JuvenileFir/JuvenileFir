@@ -1,0 +1,1010 @@
+DATA_N: 73050
+DATA_PATH: tpc-ds-dateData
+TARGET_NUMBER: 0
+TARGET_NUMBER_2: 0
+TARGET_L: 
+19980309 19980804 19980408 19980804 20010112 20010112 20010602 19990501 19980318 19980804 20010112 19990201 19990501 19980318 20020530 
+TARGET_R: 
+19980508 19980903 19980601 19980903 20010211 20010212 20010801 19990701 19980616 19980818 20010211 19990403 19990701 19980616 20020729 
+INSERT: 
+
+THREAD_N: 4
+CODE_WIDTH: 32
+STRIDE: 512
+OPERATOR_TYPE: 3
+DEBUG: 0
+
+SAMPLES_N: 36
+JOBS_PER_THREAD: 18272
+MAX_CODE_VAL: 4294967295
+MALLOC_DATA_N: 81920
+BITMAP_N: 2560
+----------
+开始从文件：tpc-ds-dateData 装载数据 
+装载数据完成，用时： 0.562000 ms
+data数据量：73050   每线程任务数：18272
+
+开始采样
+采样完成，用时： 0.810000 ms
+
+开始创建映射函数S
+创建映射函数S 完成  用时： 0.006000 ms
+
+开始创建ske_col
+创建ske_col完成，用时： 17.415000 ms
+
+第1组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 19980309 < x < 19980508
+-----------------------------------
+scan_func[0]: 0.556000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.476000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.525000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.499000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.552000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.544000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.450000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.382000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.329000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.347000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.459000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.457000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.360000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.450000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.450000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.275000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.293000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.260000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.245000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.233000 ms
+scan_func[19]: passed
+-----------------------------------
+第2组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 19980804 < x < 19980903
+-----------------------------------
+scan_func[0]: 0.234000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.245000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.281000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.237000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.332000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.264000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.278000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.238000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.242000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.260000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.246000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.257000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.236000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.240000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.241000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.241000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.238000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.251000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.332000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.255000 ms
+scan_func[19]: passed
+-----------------------------------
+第3组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 19980408 < x < 19980601
+-----------------------------------
+scan_func[0]: 0.238000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.250000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.277000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.244000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.323000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.246000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.241000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.247000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.243000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.243000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.348000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.248000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.240000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.239000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.305000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.236000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.241000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.248000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.238000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.235000 ms
+scan_func[19]: passed
+-----------------------------------
+第4组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 19980804 < x < 19980903
+-----------------------------------
+scan_func[0]: 0.225000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.254000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.295000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.250000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.228000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.233000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.231000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.229000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.231000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.247000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.232000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.228000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.229000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.246000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.227000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.224000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.233000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.234000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.230000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.224000 ms
+scan_func[19]: passed
+-----------------------------------
+第5组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 20010112 < x < 20010211
+-----------------------------------
+scan_func[0]: 0.253000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.229000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.237000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.228000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.227000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.297000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.218000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.219000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.249000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.228000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.224000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.223000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.324000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.222000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.223000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.285000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.305000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.301000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.280000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.287000 ms
+scan_func[19]: passed
+-----------------------------------
+第6组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 20010112 < x < 20010212
+-----------------------------------
+scan_func[0]: 0.290000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.284000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.285000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.229000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.221000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.223000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.224000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.282000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.308000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.234000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.232000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.231000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.247000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.280000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.233000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.227000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.223000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.226000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.219000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.213000 ms
+scan_func[19]: passed
+-----------------------------------
+第7组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 20010602 < x < 20010801
+-----------------------------------
+scan_func[0]: 0.295000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.236000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.230000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.237000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.325000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.307000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.235000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.294000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.238000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.229000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.306000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.236000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.208000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.223000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.210000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.308000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.238000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.229000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.242000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.238000 ms
+scan_func[19]: passed
+-----------------------------------
+第8组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 19990501 < x < 19990701
+-----------------------------------
+scan_func[0]: 0.239000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.233000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.235000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.230000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.298000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.244000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.248000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.226000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.234000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.222000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.233000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.220000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.224000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.224000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.302000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.254000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.227000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.341000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.250000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.243000 ms
+scan_func[19]: passed
+-----------------------------------
+第9组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 19980318 < x < 19980616
+-----------------------------------
+scan_func[0]: 0.304000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.244000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.226000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.248000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.317000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.237000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.248000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.309000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.350000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.242000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.298000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.247000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.223000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.302000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.243000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.245000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.318000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.240000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.244000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.231000 ms
+scan_func[19]: passed
+-----------------------------------
+第10组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 19980804 < x < 19980818
+-----------------------------------
+scan_func[0]: 0.234000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.241000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.231000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.230000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.229000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.219000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.223000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.240000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.231000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.224000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.242000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.226000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.228000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.225000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.232000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.231000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.232000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.223000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.227000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.234000 ms
+scan_func[19]: passed
+-----------------------------------
+第11组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 20010112 < x < 20010211
+-----------------------------------
+scan_func[0]: 0.231000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.227000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.250000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.233000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.230000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.228000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.231000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.227000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.229000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.230000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.234000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.222000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.309000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.287000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.232000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.232000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.222000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.218000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.227000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.225000 ms
+scan_func[19]: passed
+-----------------------------------
+第12组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 19990201 < x < 19990403
+-----------------------------------
+scan_func[0]: 0.245000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.230000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.333000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.239000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.249000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.235000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.290000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.243000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.229000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.246000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.241000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.240000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.243000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.239000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.237000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.230000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.237000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.225000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.230000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.233000 ms
+scan_func[19]: passed
+-----------------------------------
+第13组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 19990501 < x < 19990701
+-----------------------------------
+scan_func[0]: 0.239000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.236000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.241000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.224000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.232000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.239000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.241000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.231000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.231000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.236000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.228000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.230000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.233000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.224000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.227000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.236000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.228000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.241000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.309000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.225000 ms
+scan_func[19]: passed
+-----------------------------------
+第14组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 19980318 < x < 19980616
+-----------------------------------
+scan_func[0]: 0.228000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.222000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.226000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.225000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.222000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.236000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.248000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.239000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.232000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.215000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.227000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.225000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.230000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.225000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.227000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.221000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.232000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.222000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.227000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.231000 ms
+scan_func[19]: passed
+-----------------------------------
+第15组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 20020530 < x < 20020729
+-----------------------------------
+scan_func[0]: 0.234000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.366000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.244000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.231000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.237000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.229000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.232000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.225000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.237000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.222000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.226000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.233000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.328000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.230000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.230000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.233000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.247000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.227000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.230000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.214000 ms
+scan_func[19]: passed
+-----------------------------------

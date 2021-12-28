@@ -1,0 +1,100 @@
+DATA_N: 73050
+DATA_PATH: tpc-ds-dateData
+TARGET_NUMBER: 0
+TARGET_NUMBER_2: 0
+TARGET_L: 
+19980318 
+TARGET_R: 
+19980616 
+INSERT: 
+
+THREAD_N: 4
+CODE_WIDTH: 32
+STRIDE: 512
+OPERATOR_TYPE: 3
+DEBUG: 0
+
+SAMPLES_N: 36
+JOBS_PER_THREAD: 18272
+MAX_CODE_VAL: 4294967295
+MALLOC_DATA_N: 81920
+BITMAP_N: 2560
+----------
+开始从文件：tpc-ds-dateData 装载数据 
+装载数据完成，用时： 0.578000 ms
+data数据量：73050   每线程任务数：18272
+
+开始采样
+采样完成，用时： 0.748000 ms
+
+开始创建映射函数S
+创建映射函数S 完成  用时： 0.002000 ms
+
+开始创建ske_col
+创建ske_col完成，用时： 15.454000 ms
+
+第1组
+is_unique_1: NON-UNIQUE
+is_unique_2: NON-UNIQUE
+finding 19980318 < x < 19980616
+-----------------------------------
+scan_func[0]: 0.528000 ms
+scan_func[0]: passed
+-----------------------------------
+scan_func[1]: 0.454000 ms
+scan_func[1]: passed
+-----------------------------------
+scan_func[2]: 0.443000 ms
+scan_func[2]: passed
+-----------------------------------
+scan_func[3]: 0.394000 ms
+scan_func[3]: passed
+-----------------------------------
+scan_func[4]: 0.458000 ms
+scan_func[4]: passed
+-----------------------------------
+scan_func[5]: 0.402000 ms
+scan_func[5]: passed
+-----------------------------------
+scan_func[6]: 0.447000 ms
+scan_func[6]: passed
+-----------------------------------
+scan_func[7]: 0.382000 ms
+scan_func[7]: passed
+-----------------------------------
+scan_func[8]: 0.518000 ms
+scan_func[8]: passed
+-----------------------------------
+scan_func[9]: 0.544000 ms
+scan_func[9]: passed
+-----------------------------------
+scan_func[10]: 0.432000 ms
+scan_func[10]: passed
+-----------------------------------
+scan_func[11]: 0.379000 ms
+scan_func[11]: passed
+-----------------------------------
+scan_func[12]: 0.375000 ms
+scan_func[12]: passed
+-----------------------------------
+scan_func[13]: 0.378000 ms
+scan_func[13]: passed
+-----------------------------------
+scan_func[14]: 0.460000 ms
+scan_func[14]: passed
+-----------------------------------
+scan_func[15]: 0.345000 ms
+scan_func[15]: passed
+-----------------------------------
+scan_func[16]: 0.259000 ms
+scan_func[16]: passed
+-----------------------------------
+scan_func[17]: 0.242000 ms
+scan_func[17]: passed
+-----------------------------------
+scan_func[18]: 0.251000 ms
+scan_func[18]: passed
+-----------------------------------
+scan_func[19]: 0.250000 ms
+scan_func[19]: passed
+-----------------------------------
