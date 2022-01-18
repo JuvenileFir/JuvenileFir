@@ -2,12 +2,12 @@
 #include <inttypes.h>
 
 #include <algorithm>
-// #include <emmintrin.h>
+#include <emmintrin.h>
 #include <avxintrin.h>
 #include <avx2intrin.h>
 #include <asm/unistd.h>
 #include <getopt.h>
-#include <immintrin.h>
+// #include <immintrin.h>
 #include <linux/perf_event.h>
 #include <pthread.h>
 #include <sched.h>
@@ -26,7 +26,7 @@
 #include <sstream>
 #include <string>
 #include <thread>
-#define _GNU_SOURCE
+
 
 __attribute__((unused)) static long perf_event_open(
     struct perf_event_attr* hw_event, pid_t pid, int cpu, int group_fd,
@@ -62,9 +62,7 @@ struct read_format {
 typedef uint32_t base_t;
 typedef int8_t ske_t;
 
-int pthread_setaffinity_np(pthread_t thread,size_t cpusetsize,const cpu_set_t *cpuset);
 
-int pthread_getaffinity_np(pthread_t thread,size_t cpusetsize, cpu_set_t *cpuset);
 
 //定义函数指针新类型“inner_scan_work_func”
 typedef void (*inner_scan_work_func)(int t_id, int bitmap_res_tmp[][2]);
