@@ -1,13 +1,9 @@
 #include <assert.h>
 #include <inttypes.h>
-
 #include <algorithm>
-#include <emmintrin.h>
-#include <avxintrin.h>
-#include <avx2intrin.h>
 #include <asm/unistd.h>
 #include <getopt.h>
-// #include <immintrin.h>
+#include <immintrin.h>
 #include <linux/perf_event.h>
 #include <pthread.h>
 #include <sched.h>
