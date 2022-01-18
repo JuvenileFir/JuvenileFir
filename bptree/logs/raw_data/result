@@ -1,0 +1,468 @@
+
+B+ Tree BUILDING time: 98238.700000 ms
+===================
+RUNNING SELECTIVITY 2e-05 :
+B+ tree lessthan time: 14.464000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.720000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 3.467000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.522000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.462000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.269000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.431000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 3.601000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.282000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.355000 ms
+checking, target:85899
+CHECK PASSED!
+RUNNING SELECTIVITY 4e-05 :
+B+ tree lessthan time: 10.636000 ms
+checking, target:171798
+CHECK PASSED!
+B+ tree lessthan time: 2.374000 ms
+checking, target:171798
+CHECK PASSED!
+B+ tree lessthan time: 2.333000 ms
+checking, target:171798
+CHECK PASSED!
+B+ tree lessthan time: 2.373000 ms
+checking, target:171798
+CHECK PASSED!
+B+ tree lessthan time: 2.341000 ms
+checking, target:171798
+CHECK PASSED!
+B+ tree lessthan time: 2.320000 ms
+checking, target:171798
+CHECK PASSED!
+B+ tree lessthan time: 2.615000 ms
+checking, target:171798
+CHECK PASSED!
+B+ tree lessthan time: 2.569000 ms
+checking, target:171798
+CHECK PASSED!
+B+ tree lessthan time: 2.398000 ms
+checking, target:171798
+CHECK PASSED!
+B+ tree lessthan time: 2.521000 ms
+checking, target:171798
+CHECK PASSED!
+RUNNING SELECTIVITY 8e-05 :
+B+ tree lessthan time: 8.318000 ms
+checking, target:343597
+CHECK PASSED!
+B+ tree lessthan time: 2.451000 ms
+checking, target:343597
+CHECK PASSED!
+B+ tree lessthan time: 2.402000 ms
+checking, target:343597
+CHECK PASSED!
+B+ tree lessthan time: 2.489000 ms
+checking, target:343597
+CHECK PASSED!
+B+ tree lessthan time: 2.553000 ms
+checking, target:343597
+CHECK PASSED!
+B+ tree lessthan time: 2.807000 ms
+checking, target:343597
+CHECK PASSED!
+B+ tree lessthan time: 3.824000 ms
+checking, target:343597
+CHECK PASSED!
+B+ tree lessthan time: 2.446000 ms
+checking, target:343597
+CHECK PASSED!
+B+ tree lessthan time: 2.577000 ms
+checking, target:343597
+CHECK PASSED!
+B+ tree lessthan time: 2.479000 ms
+checking, target:343597
+CHECK PASSED!
+RUNNING SELECTIVITY 0.00016 :
+B+ tree lessthan time: 7.685000 ms
+checking, target:687194
+CHECK PASSED!
+B+ tree lessthan time: 3.571000 ms
+checking, target:687194
+CHECK PASSED!
+B+ tree lessthan time: 2.595000 ms
+checking, target:687194
+CHECK PASSED!
+B+ tree lessthan time: 3.829000 ms
+checking, target:687194
+CHECK PASSED!
+B+ tree lessthan time: 3.881000 ms
+checking, target:687194
+CHECK PASSED!
+B+ tree lessthan time: 3.835000 ms
+checking, target:687194
+CHECK PASSED!
+B+ tree lessthan time: 2.659000 ms
+checking, target:687194
+CHECK PASSED!
+B+ tree lessthan time: 3.928000 ms
+checking, target:687194
+CHECK PASSED!
+B+ tree lessthan time: 2.810000 ms
+checking, target:687194
+CHECK PASSED!
+B+ tree lessthan time: 4.015000 ms
+checking, target:687194
+CHECK PASSED!
+RUNNING SELECTIVITY 0.00032 :
+B+ tree lessthan time: 8.226000 ms
+checking, target:1374389
+CHECK PASSED!
+B+ tree lessthan time: 2.974000 ms
+checking, target:1374389
+CHECK PASSED!
+B+ tree lessthan time: 2.902000 ms
+checking, target:1374389
+CHECK PASSED!
+B+ tree lessthan time: 2.836000 ms
+checking, target:1374389
+CHECK PASSED!
+B+ tree lessthan time: 3.071000 ms
+checking, target:1374389
+CHECK PASSED!
+B+ tree lessthan time: 3.118000 ms
+checking, target:1374389
+CHECK PASSED!
+B+ tree lessthan time: 3.059000 ms
+checking, target:1374389
+CHECK PASSED!
+B+ tree lessthan time: 2.911000 ms
+checking, target:1374389
+CHECK PASSED!
+B+ tree lessthan time: 3.027000 ms
+checking, target:1374389
+CHECK PASSED!
+B+ tree lessthan time: 4.423000 ms
+checking, target:1374389
+CHECK PASSED!
+RUNNING SELECTIVITY 0.00064 :
+B+ tree lessthan time: 9.152000 ms
+checking, target:2748779
+CHECK PASSED!
+B+ tree lessthan time: 3.699000 ms
+checking, target:2748779
+CHECK PASSED!
+B+ tree lessthan time: 3.713000 ms
+checking, target:2748779
+CHECK PASSED!
+B+ tree lessthan time: 3.719000 ms
+checking, target:2748779
+CHECK PASSED!
+B+ tree lessthan time: 3.627000 ms
+checking, target:2748779
+CHECK PASSED!
+B+ tree lessthan time: 3.769000 ms
+checking, target:2748779
+CHECK PASSED!
+B+ tree lessthan time: 3.536000 ms
+checking, target:2748779
+CHECK PASSED!
+B+ tree lessthan time: 3.623000 ms
+checking, target:2748779
+CHECK PASSED!
+B+ tree lessthan time: 3.648000 ms
+checking, target:2748779
+CHECK PASSED!
+B+ tree lessthan time: 3.697000 ms
+checking, target:2748779
+CHECK PASSED!
+RUNNING SELECTIVITY 0.00128 :
+B+ tree lessthan time: 12.111000 ms
+checking, target:5497558
+CHECK PASSED!
+B+ tree lessthan time: 5.063000 ms
+checking, target:5497558
+CHECK PASSED!
+B+ tree lessthan time: 5.126000 ms
+checking, target:5497558
+CHECK PASSED!
+B+ tree lessthan time: 5.163000 ms
+checking, target:5497558
+CHECK PASSED!
+B+ tree lessthan time: 5.016000 ms
+checking, target:5497558
+CHECK PASSED!
+B+ tree lessthan time: 5.100000 ms
+checking, target:5497558
+CHECK PASSED!
+B+ tree lessthan time: 5.022000 ms
+checking, target:5497558
+CHECK PASSED!
+B+ tree lessthan time: 5.147000 ms
+checking, target:5497558
+CHECK PASSED!
+B+ tree lessthan time: 5.057000 ms
+checking, target:5497558
+CHECK PASSED!
+B+ tree lessthan time: 5.112000 ms
+checking, target:5497558
+CHECK PASSED!
+RUNNING SELECTIVITY 0.00256 :
+B+ tree lessthan time: 13.213000 ms
+checking, target:10995116
+CHECK PASSED!
+B+ tree lessthan time: 8.966000 ms
+checking, target:10995116
+CHECK PASSED!
+B+ tree lessthan time: 14.326000 ms
+checking, target:10995116
+CHECK PASSED!
+B+ tree lessthan time: 8.063000 ms
+checking, target:10995116
+CHECK PASSED!
+B+ tree lessthan time: 9.649000 ms
+checking, target:10995116
+CHECK PASSED!
+B+ tree lessthan time: 8.147000 ms
+checking, target:10995116
+CHECK PASSED!
+B+ tree lessthan time: 7.938000 ms
+checking, target:10995116
+CHECK PASSED!
+B+ tree lessthan time: 7.804000 ms
+checking, target:10995116
+CHECK PASSED!
+B+ tree lessthan time: 7.978000 ms
+checking, target:10995116
+CHECK PASSED!
+B+ tree lessthan time: 9.115000 ms
+checking, target:10995116
+CHECK PASSED!
+RUNNING SELECTIVITY 0.00512 :
+B+ tree lessthan time: 23.370000 ms
+checking, target:21990232
+CHECK PASSED!
+B+ tree lessthan time: 14.022000 ms
+checking, target:21990232
+CHECK PASSED!
+B+ tree lessthan time: 14.520000 ms
+checking, target:21990232
+CHECK PASSED!
+B+ tree lessthan time: 15.550000 ms
+checking, target:21990232
+CHECK PASSED!
+B+ tree lessthan time: 14.149000 ms
+checking, target:21990232
+CHECK PASSED!
+B+ tree lessthan time: 13.810000 ms
+checking, target:21990232
+CHECK PASSED!
+B+ tree lessthan time: 13.945000 ms
+checking, target:21990232
+CHECK PASSED!
+B+ tree lessthan time: 14.050000 ms
+checking, target:21990232
+CHECK PASSED!
+B+ tree lessthan time: 13.766000 ms
+checking, target:21990232
+CHECK PASSED!
+B+ tree lessthan time: 13.650000 ms
+checking, target:21990232
+CHECK PASSED!
+RUNNING SELECTIVITY 0.01024 :
+B+ tree lessthan time: 32.533000 ms
+checking, target:43980465
+CHECK PASSED!
+B+ tree lessthan time: 25.433000 ms
+checking, target:43980465
+CHECK PASSED!
+B+ tree lessthan time: 26.055000 ms
+checking, target:43980465
+CHECK PASSED!
+B+ tree lessthan time: 26.251000 ms
+checking, target:43980465
+CHECK PASSED!
+B+ tree lessthan time: 31.324000 ms
+checking, target:43980465
+CHECK PASSED!
+B+ tree lessthan time: 26.780000 ms
+checking, target:43980465
+CHECK PASSED!
+B+ tree lessthan time: 26.042000 ms
+checking, target:43980465
+CHECK PASSED!
+B+ tree lessthan time: 25.830000 ms
+checking, target:43980465
+CHECK PASSED!
+B+ tree lessthan time: 25.541000 ms
+checking, target:43980465
+CHECK PASSED!
+B+ tree lessthan time: 25.938000 ms
+checking, target:43980465
+CHECK PASSED!
+RUNNING SELECTIVITY 0.02048 :
+B+ tree lessthan time: 56.942000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 48.603000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 48.833000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 48.926000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 48.570000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 48.550000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 49.594000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 48.866000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 49.748000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 49.495000 ms
+checking, target:87960930
+CHECK PASSED!
+RUNNING SELECTIVITY 0.04096 :
+B+ tree lessthan time: 108.788000 ms
+checking, target:175921860
+CHECK PASSED!
+B+ tree lessthan time: 111.919000 ms
+checking, target:175921860
+CHECK PASSED!
+B+ tree lessthan time: 103.751000 ms
+checking, target:175921860
+CHECK PASSED!
+B+ tree lessthan time: 107.355000 ms
+checking, target:175921860
+CHECK PASSED!
+B+ tree lessthan time: 103.635000 ms
+checking, target:175921860
+CHECK PASSED!
+B+ tree lessthan time: 103.401000 ms
+checking, target:175921860
+CHECK PASSED!
+B+ tree lessthan time: 103.532000 ms
+checking, target:175921860
+CHECK PASSED!
+B+ tree lessthan time: 103.709000 ms
+checking, target:175921860
+CHECK PASSED!
+B+ tree lessthan time: 103.522000 ms
+checking, target:175921860
+CHECK PASSED!
+B+ tree lessthan time: 103.698000 ms
+checking, target:175921860
+CHECK PASSED!
+RUNNING SELECTIVITY 0.08192 :
+B+ tree lessthan time: 216.745000 ms
+checking, target:351843720
+CHECK PASSED!
+B+ tree lessthan time: 204.543000 ms
+checking, target:351843720
+CHECK PASSED!
+B+ tree lessthan time: 203.269000 ms
+checking, target:351843720
+CHECK PASSED!
+B+ tree lessthan time: 203.994000 ms
+checking, target:351843720
+CHECK PASSED!
+B+ tree lessthan time: 203.164000 ms
+checking, target:351843720
+CHECK PASSED!
+B+ tree lessthan time: 204.545000 ms
+checking, target:351843720
+CHECK PASSED!
+B+ tree lessthan time: 211.232000 ms
+checking, target:351843720
+CHECK PASSED!
+B+ tree lessthan time: 204.927000 ms
+checking, target:351843720
+CHECK PASSED!
+B+ tree lessthan time: 204.098000 ms
+checking, target:351843720
+CHECK PASSED!
+B+ tree lessthan time: 203.218000 ms
+checking, target:351843720
+CHECK PASSED!
+RUNNING SELECTIVITY 0.16384 :
+B+ tree lessthan time: 430.539000 ms
+checking, target:703687441
+CHECK PASSED!
+B+ tree lessthan time: 412.855000 ms
+checking, target:703687441
+CHECK PASSED!
+B+ tree lessthan time: 413.571000 ms
+checking, target:703687441
+CHECK PASSED!
+B+ tree lessthan time: 411.140000 ms
+checking, target:703687441
+CHECK PASSED!
+B+ tree lessthan time: 415.450000 ms
+checking, target:703687441
+CHECK PASSED!
+B+ tree lessthan time: 421.160000 ms
+checking, target:703687441
+CHECK PASSED!
+B+ tree lessthan time: 419.093000 ms
+checking, target:703687441
+CHECK PASSED!
+B+ tree lessthan time: 421.929000 ms
+checking, target:703687441
+CHECK PASSED!
+B+ tree lessthan time: 427.703000 ms
+checking, target:703687441
+CHECK PASSED!
+B+ tree lessthan time: 419.975000 ms
+checking, target:703687441
+CHECK PASSED!
+RUNNING SELECTIVITY 0.32768 :
+B+ tree lessthan time: 856.314000 ms
+checking, target:1407374883
+CHECK PASSED!
+B+ tree lessthan time: 828.875000 ms
+checking, target:1407374883
+CHECK PASSED!
+B+ tree lessthan time: 838.086000 ms
+checking, target:1407374883
+CHECK PASSED!
+B+ tree lessthan time: 829.858000 ms
+checking, target:1407374883
+CHECK PASSED!
+B+ tree lessthan time: 829.020000 ms
+checking, target:1407374883
+CHECK PASSED!
+B+ tree lessthan time: 830.598000 ms
+checking, target:1407374883
+CHECK PASSED!
+B+ tree lessthan time: 831.483000 ms
+checking, target:1407374883
+CHECK PASSED!
+B+ tree lessthan time: 861.650000 ms
+checking, target:1407374883
+CHECK PASSED!
+B+ tree lessthan time: 824.688000 ms
+checking, target:1407374883
+CHECK PASSED!
+B+ tree lessthan time: 831.463000 ms
+checking, target:1407374883
+CHECK PASSED!

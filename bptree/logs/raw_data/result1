@@ -1,0 +1,32 @@
+RUNNING  SELECTIVITY 2e-05 :
+B+ tree lessthan time: 14.464000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.720000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 3.467000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.522000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.462000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.269000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.431000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 3.601000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.282000 ms
+checking, target:85899
+CHECK PASSED!
+B+ tree lessthan time: 2.355000 ms
+checking, target:85899
+CHECK PASSED!
+

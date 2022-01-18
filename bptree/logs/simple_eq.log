@@ -1,0 +1,12 @@
+
+B+ Tree BUILDING time: 99576.598000 ms
+===================
+RUNNING SELECTIVITY 0.1 :
+B+ tree equal time: 14.564000 ms
+checking:result = 429496729
+CHECK PASSED!
+RUNNING SELECTIVITY 0.9 :
+B+ tree equal time: 12.616000 ms
+checking:result = 3865470565
+3865470565
+CHECK PASSED!

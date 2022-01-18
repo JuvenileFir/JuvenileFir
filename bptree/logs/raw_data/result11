@@ -1,0 +1,32 @@
+RUNNING  SELECTIVITY 0.02048 :
+B+ tree lessthan time: 56.942000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 48.603000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 48.833000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 48.926000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 48.570000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 48.550000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 49.594000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 48.866000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 49.748000 ms
+checking, target:87960930
+CHECK PASSED!
+B+ tree lessthan time: 49.495000 ms
+checking, target:87960930
+CHECK PASSED!
+

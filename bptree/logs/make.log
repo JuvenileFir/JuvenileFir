@@ -1,0 +1,23 @@
+simple_bptree.cc:92:37: warning: left shift count >= width of type [-Wshift-count-overflow]
+   92 | const unsigned int CODE_MAX = (1 << 32) - 1;
+      |                                     ^~
+simple_bptree.cc: In member function ‘virtual Node* Node::getNext()’:
+simple_bptree.cc:144:27: warning: no return statement in function returning non-void [-Wreturn-type]
+  144 |   virtual Node *getNext(){};
+      |                           ^
+simple_bptree.cc: In member function ‘BITS* BPTree::lessthan_mt(CODE, BITS*)’:
+simple_bptree.cc:453:3: warning: no return statement in function returning non-void [-Wreturn-type]
+  453 |   }
+      |   ^
+simple_bptree.cc: In member function ‘BITS* BPTree::greaterthan_mt(CODE, BITS*)’:
+simple_bptree.cc:463:3: warning: no return statement in function returning non-void [-Wreturn-type]
+  463 |   }
+      |   ^
+simple_bptree.cc: In member function ‘BITS* BPTree::equal_mt(CODE, BITS*)’:
+simple_bptree.cc:476:3: warning: no return statement in function returning non-void [-Wreturn-type]
+  476 |   }
+      |   ^
+simple_bptree.cc: In member function ‘BITS* BPTree::between_mt(CODE, CODE, BITS*)’:
+simple_bptree.cc:492:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  492 | }
+      | ^
