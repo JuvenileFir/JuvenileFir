@@ -36,8 +36,9 @@
 
 using namespace pmem::obj;
 
-#define LAYOUT "COLUMN SKETCHES PMEM"
-#define HELLO_PMEM_POOL_SIZE ((base_t)(1024 * 1024 * 12))
+#define LAYOUT "ColumnSketchesLayout"
+// #define HELLO_PMEM_POOL_SIZE ((base_t)((size_t)1024 * (size_t)1024 * (size_t)1024 * (size_t)64))
+#define HELLO_PMEM_POOL_SIZE ((size_t)((size_t)1024 * (size_t)1024 * (size_t)1024 * (size_t)8)) 
 
 __attribute__((unused)) static long perf_event_open(
     struct perf_event_attr* hw_event, pid_t pid, int cpu, int group_fd,
@@ -73,15 +74,15 @@ struct read_format {
 typedef uint32_t base_t;
 typedef int8_t ske_t;
 
-const char *pmempath = "/mnt/mem/testpool";
+const char *pmempath = "/mnt/pmem1/testpool";
 
 //定义函数指针新类型“inner_scan_work_func”
 typedef void (*inner_scan_work_func)(int t_id, int bitmap_res_tmp[][2]);
 // int DATA_N = 73050;//总数据量
-int DATA_N = 1e6;//总数据量
+int DATA_N = 1e9;//总数据量
 char DATA_PATH[256];
 char APPEND_PATH[256];
-int THREAD_N = 4;
+int THREAD_N = 32;
 base_t TARGET_NUMBER;
 int CODE_WIDTH = 32;
 int STRIDE = 4096;
@@ -525,8 +526,8 @@ void init(int argc, char* argv[]) {
 			pop = pool<root>::create(
 			pmempath, LAYOUT, HELLO_PMEM_POOL_SIZE, S_IWUSR | S_IRUSR);
       transaction::run(pop, [&] {
-      pop.root()->pda = make_persistent<base_t[]> (1e6);
-      pop.root()->pcs = make_persistent<ske_t[]> (1e6);
+      pop.root()->pda = make_persistent<base_t[]> (DATA_N);
+      pop.root()->pcs = make_persistent<ske_t[]> (DATA_N);
 		      });
       printf("新建\n");
       }
@@ -720,7 +721,6 @@ void init_data_from_file() {
   } else if (CODE_WIDTH == 32) {
     uint32_t* file_data = (uint32_t*)malloc(DATA_N * sizeof(uint32_t));
     if(!(fread(file_data, sizeof(uint32_t), DATA_N, fp))) exit(-1); 
-    printf("%d\n",size);
     transaction::run(pop, [&] {
           for (int i = 0; i < size; i++) pptr[i] = file_data[i];
 		});
@@ -1331,9 +1331,9 @@ void test_scan(base_t target) {
       printf("scan_func[%d]: passed\n", i);
     }
     printf("-----------------------------------\n");
-    
+    timeres += elapsed; 
   }
-  timeres += elapsed;  
+   
   // fprintf(fp,"\n");
   // fclose(fp);  
 }
@@ -1452,12 +1452,12 @@ int main(int argc, char* argv[]) {
     }//↑若两目标数不满足左小右大，则交换以确保左小右大
 
     test_scan(TARGET_NUMBER);//此函数为实际操作
-    
+    FILE* fp = fopen("search_merge.xls", "a");
+    timeres=timeres/20;  
+    fprintf(fp,"%.3f\n",timeres);
+    fclose(fp);
   }
-  FILE* fp = fopen("search_merge.xls", "a");
-  timeres=timeres/20;  
-  fprintf(fp,"%.3f\n",timeres);
-  fclose(fp);
+  
 //释放内存
   
   clean();

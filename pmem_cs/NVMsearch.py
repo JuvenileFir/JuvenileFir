@@ -7,7 +7,6 @@ time_start = time.time()
 # print(time1)
 
 # TODO: timeit
-# for width in (8,16,32):
 width =32
 code_width = "width_{}".format(width)
 
@@ -17,24 +16,21 @@ max_val = 1 << width
 
 targets = ""
 
-for selectivity in range(0,100,5):
+for selectivity in range(0,100,10):
     target = int((max_val - 1) * selectivity / 100)
     targets += str(target)
     targets += ","
 
 operator = "lt"
+file= "data_1e6"
 
-args = "-l {} -o {}  ".format(targets,operator)
+args = "-l {} -o {} -f {}".format(targets,operator,file)
 
-output_file = "search_{}.log".format(width)
-first ="sudo rm /mnt/mem/testpool"
+output_file = "NVMsearch.log"
 # print(args)
 print("开始执行")
+cmd = "sudo ./ct.out " + args  + " > " + output_file
 
-cmd = "sudo ./ct.out " + args + " > " + output_file
-
-# os.system("ls")
-os.system(first)
 os.system(cmd)
 
 # time2 = timeit.timeit()

@@ -9,7 +9,6 @@ time_start = time.time()
 # TODO: timeit
 # for width in (8,16,32):
 width =32
-code_width = "width_{}".format(width)
 
 # compile file
 
@@ -19,14 +18,16 @@ targets = ""
 file = "data_1e6"
 afile = "data_1e6_2"
 operator = "lt"
-output_file = "append_{}.log".format(width)
-
+output_file = "NVMappend.log"
+rm = "rm -f NVMappend.log"
 # print(args)
+os.system(rm)
 print("开始执行")
 
 for selectivity in range(10,101,10):
     args = "-o {} -f {} -i {} -p {}".format(operator,file,afile,selectivity)
-    cmd = "./ct.out " + args  + " > " + output_file
+    cmd = "./ct.out " + args  + " >> " + output_file 
+
     os.system(cmd)
     
 
