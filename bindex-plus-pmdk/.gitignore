@@ -1,0 +1,26 @@
+*.txt
+*.log
+log
+
+.vscode
+
+# compile file
+*.o
+*.out
+
+# data file
+*.dat
+savefile
+
+# execute file
+bindex
+bindex-ex
+bindex-cell
+
+# call graph  
+*.dot
+*.png
+
+
+# test program
+test
